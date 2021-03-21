@@ -1,5 +1,7 @@
 package br.edu.insper.desagil.malte;
 
-public class Caixa {
+import java.util.List;
 
+public class Caixa {
+	private List<Pedido> pedidos;
 }
