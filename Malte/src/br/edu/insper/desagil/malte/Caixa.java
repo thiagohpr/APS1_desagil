@@ -27,7 +27,7 @@ public class Caixa {
 				int desconto=this.descontos.get(cod);
 				total+=pedido.total()*(1-desconto);
 			}else {
-				total+=pedido.total(;)
+				total+=pedido.total();
 			}
 			
 			
