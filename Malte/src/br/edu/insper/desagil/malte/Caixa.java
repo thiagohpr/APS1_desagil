@@ -19,7 +19,7 @@ public class Caixa {
 	}
 	
 	public float calculaTotal (Carrinho carrinho) {
-		float total;
+		float total = 0;
 		for (Pedido pedido:carrinho.getPedidos()) {
 			Produto produto=pedido.getProduto();
 			int cod = produto.getCodigo();
