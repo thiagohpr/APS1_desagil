@@ -20,12 +20,13 @@ public class Caixa {
 	
 	public float calculaTotal (Carrinho carrinho) {
 		float total = 0;
+		
 		for (Pedido pedido:carrinho.getPedidos()) {
 			Produto produto=pedido.getProduto();
 			int cod = produto.getCodigo();
 			if (this.descontos.containsKey(cod)) {
 				int desconto=this.descontos.get(cod);
-				total+=pedido.total()*(1-desconto);
+				total+=pedido.total()*((double)(100-desconto)/100);
 			}else {
 				total+=pedido.total();
 			}
